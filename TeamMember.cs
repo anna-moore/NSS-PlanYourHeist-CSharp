@@ -42,7 +42,7 @@ namespace PlanYourHeist
         public void DisplayMemberInfo()
         {
 
-            Console.WriteLine(Name);
+            Console.WriteLine($"{Name} is the new team member");
             Console.WriteLine($"This is user's skill level {SkillLevel}");
             Console.WriteLine($"This is user courage level {CourageFactor}");
 

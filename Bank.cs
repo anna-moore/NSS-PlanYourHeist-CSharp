@@ -13,7 +13,6 @@ namespace PlanYourHeist
         {
             get
             {
-
                 if (CashOnHand <= 0 && AlarmSound <= 0 && VaultScore <= 0 && SecurityGuardScore <= 0)
                 {
                     return true;
