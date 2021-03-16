@@ -1,5 +1,5 @@
 using System;
-
+//update to limit the min and max
 namespace PlanYourHeist
 {
     public class TeamMember
@@ -22,11 +22,11 @@ namespace PlanYourHeist
         {
             Console.Write("Enter a positive interger for your skill level: ");
             int skill = Int32.Parse(Console.ReadLine());
-            while (skill > 0)
-            {
-                Console.Write("Try again with a positive number: ");
-                skill = Int32.Parse(Console.ReadLine());
-            }
+            // while (skill > 0)
+            // {
+            //     Console.Write("Try again with a positive number: ");
+            //     skill = Int32.Parse(Console.ReadLine());
+            // }
 
             return skill;
         }
