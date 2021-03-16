@@ -1,6 +1,6 @@
 # NSS-PlanYourHeist-CSharp (Instructions)
 
-# Plan Your Heist
+# Plan Your Heist (run on terminal with dotnet run)
 
 ## A C# Exercise
 
