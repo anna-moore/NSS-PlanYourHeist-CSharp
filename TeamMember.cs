@@ -6,7 +6,7 @@ namespace PlanYourHeist
     {
         public string Name { get; set; }
         public int SkillLevel { get; set; }
-        public double CourageFactor { get; set; }
+        public decimal CourageFactor { get; set; }
 
         public static string UserName()
         {
@@ -31,10 +31,22 @@ namespace PlanYourHeist
             return skill;
         }
 
-        public static double UserCourageFactor()
+        public static decimal UserCourageFactor()
         {
-            Console.Write("Enter a number 0.0 - 2.0 for your courage level: ");
-            double courage = Double.Parse(Console.ReadLine());
+            decimal courage = -1.0m;
+            while (courage < 0.0m || courage > 2.0m)
+            {
+                Console.Write("Enter a number 0.0 - 2.0 for your courage level: ");
+
+                try
+                {
+                    courage = decimal.Parse(Console.ReadLine());
+                }
+                catch
+                {
+                    Console.WriteLine("Please make sure the courage factor is between 0.0 and 2.0");
+                }
+            }
 
             return courage;
         }
