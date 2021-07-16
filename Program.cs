@@ -59,6 +59,7 @@ namespace PlanYourHeist
                 };
 
             {
+                //what is this number suppose to be?
                 string value = Console.ReadLine();
                 bool success = Int32.TryParse(value, out int result);
 
@@ -79,7 +80,7 @@ namespace PlanYourHeist
                 {
                     Console.WriteLine($"{rolodex.Count} members of the team.");
                     Console.WriteLine("");
-                    Console.Write("Would you like to add a new person? ");
+                    Console.Write("Would you like to add a new person? (hit enter for no)");
                     string answer = Console.ReadLine();
                     if (string.IsNullOrWhiteSpace(answer))
                     {
