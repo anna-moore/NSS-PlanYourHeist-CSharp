@@ -20,13 +20,14 @@ namespace PlanYourHeist
         //add if and else statements to ensure that user input means requirements
         public static int UserSkillLevel()
         {
+            int skill = 0;
             Console.Write("Enter a positive interger for your skill level: ");
-            int skill = Int32.Parse(Console.ReadLine());
-            // while (skill > 0)
-            // {
-            //     Console.Write("Try again with a positive number: ");
-            //     skill = Int32.Parse(Console.ReadLine());
-            // }
+            skill = Int32.Parse(Console.ReadLine());
+            while (skill < 0)
+            {
+                Console.Write("Try again with a positive number: ");
+                skill = Int32.Parse(Console.ReadLine());
+            }
 
             return skill;
         }
