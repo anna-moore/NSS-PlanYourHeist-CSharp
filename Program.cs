@@ -9,6 +9,27 @@ namespace PlanYourHeist
         {
             Console.WriteLine("Plan your Heist!");
 
+            //determing bank difficultly level
+            int bankLevel = 0;
+            bool enteringBank = true;
+            while (enteringBank)
+            {
+                Console.WriteLine("Enter the bank's difficulty level: ");
+                Console.Write(" > ");
+                string bankLevelInput = Console.ReadLine();
+                try
+                {
+                    bankLevel = int.Parse(bankLevelInput);
+                    enteringBank = false;
+                }
+                catch
+                {
+                    Console.WriteLine("Must be an integer. Press any key to try again...");
+                    Console.ReadKey();
+                    Console.Clear();
+                }
+            }
+
             TeamMember newUser = new TeamMember()
             {
                 Name = TeamMember.UserName(),
@@ -101,7 +122,7 @@ namespace PlanYourHeist
                     Console.Write($"What percentage of the cut does {NameOfPossibleNewMember} want? (1-100): ");
                     int cut = Int32.Parse(Console.ReadLine());
 
-                    //check the speciality interger 
+                    //check the specialty interger 
                     switch (specialty)
                     {
                         case 1:
